@@ -73,7 +73,8 @@ a::visited {
     .header__heading--main {
       color: #f4f5f6;
       text-transform: capitalize;
-      margin-bottom: 3rem; }
+      margin-bottom: 3rem;
+      hyphens: auto; }
       @media screen and (max-width: 37.5em) {
         .header__heading--main {
           font-size: 1.8em;
@@ -224,7 +225,8 @@ a::visited {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 5rem;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.6rem; }
   .about__image {
     height: 35rem;
     box-shadow: 0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3); }
@@ -233,12 +235,16 @@ a::visited {
       height: 100%;
       border-radius: .2rem; }
   .about__text {
-    font-size: 1.6rem;
     color: #444;
     hyphens: auto; }
     @media screen and (max-width: 75rem) {
       .about__text {
-        font-size: 2.5em; } }
+        text-align: center; } }
+    .about__text--paragraph {
+      font-size: 1.6rem; }
+      @media screen and (max-width: 75rem) {
+        .about__text--paragraph {
+          font-size: 1.7em; } }
 
 .service {
   grid-column: col-start 1 / col-end;
@@ -252,7 +258,7 @@ a::visited {
     hyphens: auto; }
     @media screen and (max-width: 75rem) {
       .service__container {
-        font-size: 2.5em; } }
+        font-size: 1.7em; } }
   .service__content {
     background-color: #fff;
     padding: 2rem;
@@ -268,65 +274,29 @@ a::visited {
       font-weight: 650; }
       @media screen and (max-width: 75rem) {
         .service__content--heading {
-          font-size: 1.2em;
+          font-size: 1.7em;
           font-weight: 300;
           text-transform: capitalize; } }
-
-.faq {
-  grid-column: col-start 1 / col-end; }
-  .faq__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 5rem;
-    align-items: center; }
-  .faq__heading {
-    text-align: center;
-    margin-bottom: 2rem; }
-  .faq__img--box {
-    height: 40rem;
-    box-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.2);
-    border-radius: .2rem; }
-  .faq__img {
-    width: 100%;
-    height: 100%;
-    border-radius: .2rem; }
-
-.question {
-  font-size: 2rem;
-  outline: none;
-  cursor: pointer;
-  color: #444;
-  margin-bottom: 1rem; }
-
-.answer {
-  font-size: 1.6rem;
-  color: #23527c;
-  margin: 1rem; }
-
-details[open] summary ~ * {
-  animation: sweep .5s ease-in-out; }
-
-@keyframes sweep {
-  from {
-    opacity: 0;
-    margin-top: -3rem; }
-  to {
-    opacity: 1;
-    margin-top: 0; } }
-
-.location {
-  display: grid;
-  grid-template-columns: col-start 1 / col-end;
-  background-color: brown; }
+    .service__content--info {
+      font-size: 1.6rem; }
+      @media screen and (max-width: 75rem) {
+        .service__content--info {
+          font-size: 1.6em; } }
 
 .review {
   grid-column: full-start  / full-end;
   background-color: #f3f4f5;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  font-size: 1.6rem; }
   .review__box {
     display: grid;
     grid-template-columns: [full-start] 5rem 1fr repeat(8, [col-start] minmax(min-content, 14rem)) [col-end] 1fr 5rem [full-end];
-    margin: 2rem auto; }
+    margin: 2rem auto;
+    font-size: 1.6rem;
+    grid-column: col-start 1 / col-end; }
+    @media screen and (max-width: 75rem) {
+      .review__box {
+        grid-template-columns: [full-start] 2rem 1fr repeat(8, [col-start] minmax(min-content, 14rem)) [col-end] 1fr 2rem [full-end]; } }
   .review__heading {
     text-align: center;
     margin-top: 3rem; }
@@ -335,12 +305,12 @@ details[open] summary ~ * {
     padding: 3rem;
     background-color: #fff;
     box-shadow: 1rem 1.5rem 2rem rgba(0, 0, 0, 0.1);
-    grid-column: col-start 2 / col-start 8;
+    grid-column: col-start 1 / col-end;
     display: flex;
     align-items: center; }
     @media screen and (max-width: 56.25em) {
       .review__caption {
-        font-size: 1.5em;
+        font-size: 1.7em;
         flex-direction: column;
         padding: 1.2rem 0rem;
         grid-column: col-start 1 / col-end; } }
@@ -357,7 +327,7 @@ details[open] summary ~ * {
       height: 100%;
       border-radius: 50%; }
   .review__text {
-    width: 75%;
+    width: 90%;
     margin-left: 5rem; }
     @media screen and (max-width: 56.25em) {
       .review__text {
@@ -367,15 +337,14 @@ details[open] summary ~ * {
       color: #23527c; }
       @media screen and (max-width: 75rem) {
         .review__text--heading {
-          font-size: 1.2em;
-          font-weight: 300; } }
-    .review__text--paragraph {
-      font-style: italic;
+          font-size: 1.1em;
+          font-weight: 550; } }
+    .review__text__text--paragraph {
       color: #555;
-      font-weight: 300; }
+      font-size: 1.6rem; }
       @media screen and (max-width: 75rem) {
-        .review__text--paragraph {
-          font-size: 1.1em; } }
+        .review__text__text--paragraph {
+          font-size: 1.7em; } }
 
 .contact {
   grid-column: col-start 1 / col-end;
@@ -406,24 +375,6 @@ details[open] summary ~ * {
       color: #555;
       text-align: center; }
 
-.submit {
-  font-size: 1.7rem;
-  color: #fff;
-  background-color: #444;
-  outline: none;
-  border: none;
-  width: 10rem;
-  margin: 0 auto;
-  border-radius: 2rem;
-  padding: 1rem 2rem; }
-  .submit:hover {
-    color: #444;
-    background-color: #F5C439;
-    cursor: pointer; }
-  @media screen and (max-width: 75rem) {
-    .submit {
-      font-size: 1.2em; } }
-
 .svg-icon {
   width: 2.5rem;
   height: 2.5rem; }
@@ -436,10 +387,13 @@ details[open] summary ~ * {
   text-align: center; }
   @media screen and (max-width: 75rem) {
     .summary {
-      font-size: 1.3em; } }
-  @media screen and (max-width: 75rem) {
-    .summary__items {
-      text-align: center; } }
+      font-size: 1.6em; } }
+  .summary__items {
+    font-size: 1.6rem; }
+    @media screen and (max-width: 75rem) {
+      .summary__items {
+        text-align: center;
+        font-size: 1.7em; } }
 
 .terms {
   grid-column: col-start 1 / col-end;
@@ -448,7 +402,7 @@ details[open] summary ~ * {
     font-size: 1.6rem; }
     @media screen and (max-width: 75rem) {
       .terms__text {
-        font-size: 1.3em; } }
+        font-size: 1.7em; } }
 
 li {
   font-size: 1.6rem;
@@ -488,10 +442,11 @@ li {
     font-size: 1.6rem;
     text-align: center;
     margin-bottom: 5rem;
-    padding: 3rem; }
+    padding: 3rem;
+    color: #222; }
     @media screen and (max-width: 75rem) {
       .founder__about {
-        font-size: 1.6em; } }
+        font-size: 1.7em; } }
 
 .footer {
   background-color: #fff;
