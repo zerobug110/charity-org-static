@@ -3,10 +3,12 @@
     background-color: #f3f4f5;
     padding-bottom: 5rem;
     font-size: 1.6rem;
+    // text-align: center;
 
     @include respond (tab-land) {
         font-size: 1.2em;
         color: #444;
+        text-align: center;
     }
    
 
@@ -15,9 +17,9 @@
         display: grid;
         grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 14rem))[col-end] 1fr 5rem[full-end];
         margin: 2rem auto;
-       font-size: 1.6rem;
-       grid-column: col-start 1 / col-end;
-
+        font-size: 1.6rem;
+        grid-column: col-start 1 / col-end;
+        
        @include respond(tab-land) {
         grid-template-columns: [full-start]2rem 1fr repeat(8,[col-start] minmax(min-content, 14rem))[col-end] 1fr 2rem[full-end];
        }
@@ -25,8 +27,8 @@
     }
 
     &__heading {
-        text-align: center;
         margin-top: 3rem;
+        text-align: center;
     }
 
     &__caption {
@@ -79,16 +81,18 @@
         &--heading {
             font-size: 2rem;
             color: $font-color;
+            // text-align: center;
             @include respond  (tab-land) {
                 font-size: 1.1em;
                 font-weight: 550;
-
+                text-align: center;
             }
         }
 
         &__text--paragraph{
             color: #555;
             font-size: 1.6rem;
+            text-align: center;
              @include respond(tab-land) {
                  font-size: 1.5em;
              }
